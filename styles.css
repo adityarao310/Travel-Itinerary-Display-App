@@ -50,3 +50,13 @@ h1 {
     text-align: left;
     width: 340px;
 }
+
+.column {
+    height: 100px;
+}
+
+.column img {
+    max-height: 100%;
+    max-width: 100%;
+    border: 1px solid red;
+}
