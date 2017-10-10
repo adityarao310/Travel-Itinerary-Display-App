@@ -16,6 +16,8 @@
             <div>
                 <input id="show-listings" type="button" value="Show Listings">
                 <input id="hide-listings" type="button" value="Hide Listings">
+                <input id="show-routes" type="button" value="Show routes">
+                <input id="hide-routes" type="button" value="Hide routes">
             </div>
         </div>
 
@@ -24,7 +26,17 @@
     </div>
 
     <!-- Replace the value of the key parameter with your own API key. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIjM5gQH2ibBO5QB1_5CpQlpNpZe7aSEg&callback=initMap" async defer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIjM5gQH2ibBO5QB1_5CpQlpNpZe7aSEg&libraries=geometry&callback=initMap" async defer>
+    </script>
+
+    </script>
+    <!-- loads the style of map here -->
+    <script src="styles.js">
+    </script>
+    </script>
+
+    <!-- loads the locations here -->
+    <script src="locations.js">
     </script>
 
     <!-- loads the main map functions here -->
