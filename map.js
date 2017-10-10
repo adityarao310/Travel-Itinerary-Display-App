@@ -2,8 +2,15 @@
 // global arrays and variables to be used later
 var markers = [];
 var airports = [];
+var ODPairList = [];
 var flightLine, map, mainInfowindow;
 var directionsService, directionsDisplay;
+
+// constructor function to create new O.D.Pair object for routes
+function ODPairCreation(originPosition, destinationPosition) {
+    this.originPosition = originPosition;
+    this.destinationPosition = destinationPosition;
+}
 
 // main map function loaded
 function initMap() {
@@ -28,15 +35,24 @@ function initMap() {
         var title = locations[i].title;
         // create diff icons for airprot and location
         if (locations[i].airport === false) {
+
+            // each location's position > create new O.D.Pair object
+            var newODPair = new ODPairCreation(locations[i].location, locations[i + 1].location);
+            ODPairList.push(newODPair); // store it in empty list
+            // list becomes [{origin, destination},{origin, destination}]
+            // = [{marker0position, marker1position}, {marker1position, marker2position}]
+
+
             // create a marker for every location
             var marker = new google.maps.Marker({
                 position: position,
                 // map: map, // element to be inserted on click, not needed here
                 title: title,
                 animation: google.maps.Animation.DROP,
-                id: i,
+                id: i + 1,
                 label: locations[i].number.toString(),
             });
+
             // push each marker into the empty array for use later
             markers.push(marker);
             // open main info window on click
@@ -50,7 +66,7 @@ function initMap() {
                 // map: map, // element to be inserted on click, not needed here
                 title: title,
                 animation: google.maps.Animation.DROP,
-                id: i,
+                id: i + 1,
                 label: locations[i].number.toString(),
                 icon: image,
             });
@@ -71,7 +87,6 @@ function initMap() {
         // map: map,
         geodesic: true,
     });
-
     // path definition @ origin and destination
     var path = [airports[0].getPosition(), airports[1].getPosition()];
     flightLine.setPath(path);
@@ -132,7 +147,6 @@ function showListings() {
         bounds.extend(airports[i].position);
     }
     map.fitBounds(bounds);
-    flightLine.setMap(map); // show flightline
 }
 
 // This function will loop through the listings and hide them all.
@@ -146,17 +160,39 @@ function hideListings() {
     flightLine.setMap(null);
 }
 
-// display the routes and paths
+console.log(ODPairList);
+// display the routes for flight and road
 function showRoutes(directionsService, directionsDisplay) {
-    directionsService = new google.maps.DirectionsService();
-    directionsDisplay = new google.maps.DirectionsRenderer();
+    flightLine.setMap(map); // show flight route
 
+    directionsService = new google.maps.DirectionsService();
+    var rendererDesign = {
+        suppressMarkers: true // default A,B markers are placed by service API
+    };
+    directionsDisplay = new google.maps.DirectionsRenderer(rendererDesign);
+
+    // generate route for every O.D.Pair in the list create before
+    for (i = 0; i < ODPairList.length; i++) {
+        var routeBetween = {
+            origin: ODPairList[i].originPosition,
+            destination: ODPairList[i].destinationPosition,
+            travelMode: 'DRIVING'
+        }
+        directionsService.route(routeBetween, function(response, status) {
+            if (status === google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(response);
+                directionsDisplay.setMap(map);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        });
+    };
+    /*
     var routeBetween = {
         origin: markers[2].position,
         destination: markers[3].position,
-        travelMode: google.maps.DirectionsTravelMode.DRIVING
+        travelMode: 'DRIVING'
     }
-
     directionsService.route(routeBetween, function(response, status) {
         if (status === google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(response);
@@ -165,9 +201,11 @@ function showRoutes(directionsService, directionsDisplay) {
             window.alert('Directions request failed due to ' + status);
         }
     });
+    */
+
 };
 
-// display the routes and paths
+// hide the routes and paths
 function hideRoutes(directionsService, directionsDisplay) {
     directionsDisplay.setMap(null);
 };
