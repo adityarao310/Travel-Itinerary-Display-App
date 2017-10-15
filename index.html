@@ -7,30 +7,32 @@
     <meta name="viewport" content="initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work Sans">
     <link rel="stylesheet" href="styles.css">
+    <!-- Loads jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <!-- LHS of the page -->
+            <!-- LHS of the page, inserted by tripDetails.js -->
             <div class="four columns">
-                <h1>Sumatra</h1>
-                <h4>Jungles and beaches and hidden caves.</h4>
-                <div class="descriptionTrip">
-                    Sed ut perspiciatis unde omnis iste naiunde omnis iste naiatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
+                <h2 id="title"></h2>
+                <h6 id="subTitle"></h6>
+                <div class="description">
+
                 </div>
-                <!-- Table to show day and description of that day -->
+                <!-- Table to show day and description of that day, inserted from locations.js -->
                 <table class="u-full-width">
                     <thead>
                         <tr>
-                            <th>Title</th>
                             <th>Day</th>
+                            <th>Title</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody class="tableStarts">
+                        <!-- <tr>
+                            <td class="c1">Coffee to kickstart</td>
                             <td>Third Wave Coffee Roasters</td>
-                            <td>Coffee to kickstart</td>
                         </tr>
                         <tr>
                             <td>Thate Idli Bidadi</td>
@@ -55,7 +57,7 @@
                         <tr>
                             <td>Bishkek Airport</td>
                             <td>Reach airport</td>
-                        </tr>
+                        </tr> -->
 
                     </tbody>
                 </table>
@@ -64,27 +66,28 @@
                 <div class="eight columns" id="map"></div>
             </div>
         </div>
-        <!-- Loads jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <!-- Loads the Google Maps API -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIjM5gQH2ibBO5QB1_5CpQlpNpZe7aSEg&libraries=geometry&callback=initMap" async defer></script>
 
         <!-- loads the style of map here -->
-        <script src="styles.js">
+        <script src="javascript/styles.js">
         </script>
 
         <!-- loads the locations here -->
-        <script src="locations.js"></script>
+        <script src="javascript/locations.js"></script>
 
         <!-- loads the routes here -->
-        <script src="showRoutes.js"></script>
+        <script src="javascript/showRoutes.js"></script>
 
         <!-- loads the infowindow content here -->
-        <script src="InfoWindow.js"></script>
+        <script src="javascript/InfoWindow.js"></script>
+
+        <!-- loads the LHS customer info here -->
+        <script src="javascript/tripDetails.js"></script>
 
         <!-- loads the main map functions here -->
-        <script src="map.js"></script>
+        <script src="javascript/map.js"></script>
 
 </body>
 

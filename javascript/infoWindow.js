@@ -2,22 +2,22 @@
 function populateInfoWindow(marker, infowindow) {
     // main content of window stored here
     var contentToAdd = '<div id="infowindowContainer" class="infowindowContainer">' +
-        '<h1>' + marker.title + '</h1>' +
-        '<h2>' + marker.day + '</h2>' +
+        '<h1 id ="infowindowTitle">' + marker.title + '</h1>' +
         '<div id="bodyContent">' +
-        '<p id="description">' + marker.description + '</p>' +
-        '<a target="_blank" href=' + marker.link + encodeURI(marker.title) + '>Read more</a>' +
-        '<br>' + '<br>' +
+        '<p id="infowindowDay">' + marker.day + '</p>' +
+        '<p id="infoWindowdescription">' + marker.description + " " +
+        '<a target="_blank" href=' + marker.link + encodeURI(marker.title) + '>Find out more</a>' +
+        '<br>' + '<br>' + '</p>' +
         '<div class="galleryContainer">' +
         '<div class="row">' +
         '<div class="one-third column">' +
-        '<img src=' + marker.image1 + '>' +
+        '<img id = "object-fit_contain" src=' + marker.image1 + '>' +
         '</div>' +
         '<div class="one-third column">' +
-        '<img src=' + marker.image2 + '>' +
+        '<img id = "object-fit_contain" src=' + marker.image2 + '>' +
         '</div>' +
         '<div class="one-third column">' +
-        '<img src=' + marker.image3 + '>' +
+        '<img id = "object-fit_contain" src=' + marker.image3 + '>' +
         '</div>' +
         '</div>' + '</div>' + '</div>'
     '</div>' +

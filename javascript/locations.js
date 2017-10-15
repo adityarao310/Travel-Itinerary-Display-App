@@ -11,7 +11,7 @@ var locations = [{
         airport: false,
         location: office,
         link: "https://www.google.co.in/search?q=",
-        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you. Whence its breathtaking splendour makes you wonder breathlessly and you tend to pause for a while but to continue staring at The Taj, you would sense them standing beside you!",
+        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you.",
         day: 'Start from office',
         image1: "https://pbs.twimg.com/media/DF5XaN8WsAQp4ou.jpg",
         image2: "http://www.telegraph.co.uk/content/dam/news/2016/08/29/78466248_India_Taj_Mahal_FOREIGN_trans_NvBQzQNjv4BqJOyrcvZlMzOKKEe_A9usGgTeeh881_2Zx4Udouoez5k.jpg?imwidth=450",
@@ -24,7 +24,7 @@ var locations = [{
         airport: false,
         day: 'Coffee to kickstart',
         link: "https://www.google.co.in/search?q=",
-        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you. Whence its breathtaking splendour makes you wonder breathlessly and you tend to pause for a while but to continue staring at The Taj, you would sense them standing beside you!",
+        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you.",
         number: 2,
         image1: "https://pbs.twimg.com/media/DF5XaN8WsAQp4ou.jpg",
         image2: "http://www.telegraph.co.uk/content/dam/news/2016/08/29/78466248_India_Taj_Mahal_FOREIGN_trans_NvBQzQNjv4BqJOyrcvZlMzOKKEe_A9usGgTeeh881_2Zx4Udouoez5k.jpg?imwidth=450",
@@ -37,7 +37,7 @@ var locations = [{
     {
         title: 'Bangalore Airport',
         airport: true,
-        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you. Whence its breathtaking splendour makes you wonder breathlessly and you tend to pause for a while but to continue staring at The Taj, you would sense them standing beside you!",
+        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you.",
         day: 'Reach airport',
         link: "https://www.google.co.in/search?q=",
         image1: "https://pbs.twimg.com/media/DF5XaN8WsAQp4ou.jpg",
@@ -52,7 +52,7 @@ var locations = [{
     {
         title: 'Thate Idli Bidadi',
         airport: false,
-        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you. Whence its breathtaking splendour makes you wonder breathlessly and you tend to pause for a while but to continue staring at The Taj, you would sense them standing beside you!",
+        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you.",
         day: 'Day 1 and Day 2',
         link: "https://www.google.co.in/search?q=",
         image1: "https://pbs.twimg.com/media/DF5XaN8WsAQp4ou.jpg",
@@ -67,7 +67,7 @@ var locations = [{
     {
         title: 'Manchanabele Camping',
         day: 'Day 3 camping',
-        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you. Whence its breathtaking splendour makes you wonder breathlessly and you tend to pause for a while but to continue staring at The Taj, you would sense them standing beside you!",
+        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you.",
         airport: false,
         link: "https://www.google.co.in/search?q=",
         image1: "https://pbs.twimg.com/media/DF5XaN8WsAQp4ou.jpg",
@@ -82,7 +82,7 @@ var locations = [{
     {
         title: 'Mylari Benne Dosa',
         day: 'Day 4',
-        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you. Whence its breathtaking splendour makes you wonder breathlessly and you tend to pause for a while but to continue staring at The Taj, you would sense them standing beside you!",
+        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you.",
         airport: false,
         link: "https://www.google.co.in/search?q=",
         image1: "https://pbs.twimg.com/media/DF5XaN8WsAQp4ou.jpg",
@@ -97,7 +97,7 @@ var locations = [{
     {
         title: 'Ecoscape Wildlife',
         day: 'Day 5 and Day 6 stay',
-        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you. Whence its breathtaking splendour makes you wonder breathlessly and you tend to pause for a while but to continue staring at The Taj, you would sense them standing beside you!",
+        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you.",
         airport: false,
         link: "https://www.google.co.in/search?q=",
         image1: "https://pbs.twimg.com/media/DF5XaN8WsAQp4ou.jpg",
@@ -112,7 +112,7 @@ var locations = [{
     {
         title: 'Taj Mahal',
         day: 'Leave for Mahal and night',
-        description: 'A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you. Whence its breathtaking splendour makes you wonder breathlessly and you tend to pause for a while but to continue staring at The Taj, you would sense them standing beside you!',
+        description: 'A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you.',
         airport: false,
         link: "https://www.google.co.in/search?q=",
         image1: "https://pbs.twimg.com/media/DF5XaN8WsAQp4ou.jpg",
@@ -127,7 +127,7 @@ var locations = [{
     {
         title: 'Bishkek Airport',
         day: 'Reach airport',
-        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you. Whence its breathtaking splendour makes you wonder breathlessly and you tend to pause for a while but to continue staring at The Taj, you would sense them standing beside you!",
+        description: "A look this time at the Taj will keep you indulged with thoughts superimposing your sight and would make you feel the presence of Shah Jahan, the Maker and Mumtaz Mahal, the Reason, as though walking along with you.",
         airport: true,
         link: "https://www.google.co.in/search?q=",
         image1: "https://pbs.twimg.com/media/DF5XaN8WsAQp4ou.jpg",
@@ -140,3 +140,21 @@ var locations = [{
         }
     },
 ];
+
+// insert into DOM
+// Step 1 - create new array to store day, location
+var lhsRowDays = []
+var lhsRowTitles = []
+locations.forEach(function(location) {
+    var rowLocationDay = location.day;
+    var rowLocationTitle = location.title;
+    lhsRowDays.push(rowLocationDay);
+    lhsRowTitles.push(rowLocationTitle);
+});
+
+// Step 2 - insert that array into DOM, loop over both array together since same length
+// Could have used constructor function, but mehhh
+$.each(lhsRowDays, function(index, value) {
+    var print = '<tr><td>' + lhsRowDays[index] + '</td><td>' + lhsRowTitles[index] + '</td></tr>'
+    $(".tableStarts").append(print);
+});

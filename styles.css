@@ -12,6 +12,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 - Grid
 - Base Styles
+- Info Window
 - Typography
 - Links
 - Buttons
@@ -52,18 +53,8 @@
     right: 0px;
 }
 
-.infoWindowContainer, .galleryContainer {
+.infoWindowContainer {
     max-width: 200px;
-}
-
-.column-iw {
-    height: 100px;
-}
-
-.one-third.column img {
-    max-height: 100%;
-    max-width: 100%;
-    border: 1px solid red;
 }
 
 
@@ -200,6 +191,47 @@ body {
     font-weight: 400;
     font-family: 'Work Sans';
     color: #222;
+}
+
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#infowindowTitle {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 4.0rem;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+    font-family: 'Work Sans';
+    color: #222;
+    text-align: center;
+}
+
+#infowindowDay {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 2.0rem;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+    font-family: 'Work Sans';
+    color: #222;
+    text-align: left;
+}
+
+#infoWindowdescription {
+    font-family: 'Work Sans';
+    color: #222;
+}
+
+#object-fit_contain {
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-height: 120px;
+    max-width: 120px;
+    border: 1px solid #e1e1e1;
 }
 
 
