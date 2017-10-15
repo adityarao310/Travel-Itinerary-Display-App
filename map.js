@@ -58,7 +58,7 @@ function initMap() {
                 image1: image1,
                 image2: image2,
                 image3: image3,
-                // map: map, // element to be inserted on click, not needed here
+                map: map,
                 title: title,
                 animation: google.maps.Animation.DROP,
                 id: i + 1,
@@ -75,7 +75,7 @@ function initMap() {
             var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
             var airport = new google.maps.Marker({
                 position: position,
-                // map: map, // element to be inserted on click, not needed here
+                map: map,
                 title: title,
                 day: day,
                 image1: image1,
@@ -102,75 +102,13 @@ function initMap() {
         strokeColor: '#CC0099',
         strokeOpacity: 1.0,
         strokeWeight: 3,
-        // map: map,
+        map: map,
         geodesic: true,
     });
-    // path definition @ origin and destination
+    // path definition @ origin and destination of flight
     var path = [airports[0].getPosition(), airports[1].getPosition()];
     flightLine.setPath(path);
 
-    // event listeners when the hide, show buttons are clicked
-    document.getElementById('show-listings').addEventListener('click', showListings);
-    document.getElementById('hide-listings').addEventListener('click', hideListings);
-    document.getElementById('show-routes').addEventListener('click', showRoutes);
-    document.getElementById('hide-routes').addEventListener('click', hideRoutes);
-};
-
-// This function will loop through the markers array and display them all.
-function showListings() {
-    var bounds = new google.maps.LatLngBounds();
-    // Extend the boundaries NE <> SW of map and display markers
-    for (var i = 0; i < markers.length; i++) {
-        markers[i].setMap(map);
-        bounds.extend(markers[i].position);
-    }
-    for (var i = 0; i < airports.length; i++) {
-        airports[i].setMap(map);
-        bounds.extend(airports[i].position);
-    }
-    map.fitBounds(bounds);
-}
-
-// This function will loop through the listings and hide them all.
-function hideListings() {
-    for (var i = 0; i < markers.length; i++) {
-        markers[i].setMap(null);
-    }
-    for (var i = 0; i < airports.length; i++) {
-        airports[i].setMap(null);
-    }
-    flightLine.setMap(null);
-}
-
-// display the routes for flight and road
-function showRoutes(directionsService, directionsDisplay) {
-    flightLine.setMap(map); // show flight route
-
-    directionsService = new google.maps.DirectionsService();
-    var rendererDesign = {
-        suppressMarkers: true // default A,B markers are placed by service API
-    };
-    directionsDisplay = new google.maps.DirectionsRenderer(rendererDesign);
-
-    // generate route for every O.D.Pair in the list create before
-    for (i = 0; i < ODPairList.length; i++) {
-        var routeBetween = {
-            origin: ODPairList[i].originPosition,
-            destination: ODPairList[i].destinationPosition,
-            travelMode: 'DRIVING'
-        }
-        directionsService.route(routeBetween, function(response, status) {
-            if (status === google.maps.DirectionsStatus.OK) {
-                directionsDisplay.setDirections(response);
-                directionsDisplay.setMap(map);
-            } else {
-                window.alert('Directions request failed due to ' + status);
-            }
-        });
-    };
-};
-
-// hide the routes and paths
-function hideRoutes(directionsService, directionsDisplay) {
-    directionsDisplay.setMap(null);
+    // show routes between locations
+    showRoutes(directionsService, directionsDisplay);
 };

@@ -5,25 +5,65 @@
     <meta charset="utf-8">
     <title>My Map</title>
     <meta name="viewport" content="initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work Sans">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- LHS of the page -->
     <div class="container">
-        <div class="options-box">
-            <h1>Travel Co. Expedition</h1>
-            <div>
-                <input id="show-listings" type="button" value="Show Listings">
-                <input id="hide-listings" type="button" value="Hide Listings">
-                <input id="show-routes" type="button" value="Show routes">
-                <input id="hide-routes" type="button" value="Hide routes">
+        <div class="row">
+            <!-- LHS of the page -->
+            <div class="four columns">
+                <h1>Sumatra</h1>
+                <h4>Jungles and beaches and hidden caves.</h4>
+                <div class="descriptionTrip">
+                    Sed ut perspiciatis unde omnis iste naiunde omnis iste naiatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
+                </div>
+                <!-- Table to show day and description of that day -->
+                <table class="u-full-width">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Day</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Third Wave Coffee Roasters</td>
+                            <td>Coffee to kickstart</td>
+                        </tr>
+                        <tr>
+                            <td>Thate Idli Bidadi</td>
+                            <td>Day 1 and Day 2</td>
+                        </tr>
+                        <tr>
+                            <td>Manchanabele Camping</td>
+                            <td>Day 3 camping</td>
+                        </tr>
+                        <tr>
+                            <td>Mylari Benne Dosa</td>
+                            <td>Day 4</td>
+                        </tr>
+                        <tr>
+                            <td>Ecoscape Wildlife</td>
+                            <td>Day 5 and day 6 stay</td>
+                        </tr>
+                        <tr>
+                            <td>Taj Mahal</td>
+                            <td>Leave for Mahal and night</td>
+                        </tr>
+                        <tr>
+                            <td>Bishkek Airport</td>
+                            <td>Reach airport</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <!-- RHS, main map insertion -->
+                <div class="eight columns" id="map"></div>
             </div>
         </div>
-
-        <!-- main map insertion -->
-        <div id="map"></div>
-
         <!-- Loads jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -36,6 +76,9 @@
 
         <!-- loads the locations here -->
         <script src="locations.js"></script>
+
+        <!-- loads the routes here -->
+        <script src="showRoutes.js"></script>
 
         <!-- loads the infowindow content here -->
         <script src="InfoWindow.js"></script>
