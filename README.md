@@ -7,11 +7,10 @@ A tool for travel agents to showcase custom itinerary to clients.
 - LHS contains textual information about the trip
 
 ## Roadmap of v1.0
-- LHS should insert stuff into HTML via jquery
 - Beautify the info window (font, images)
 - Fix routes issue
-
-## Upcoming 
 - Take locations (title, description, images etc) from DB 
-- Autocomplete locations using places library 
+- Autocomplete locations in backend using places library 
+- Fix smaller beauty issues
+- Add company logo and header and maybe footer?
 
