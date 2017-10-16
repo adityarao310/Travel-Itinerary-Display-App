@@ -12,6 +12,7 @@ function ODPairCreation(originPosition, destinationPosition) {
     this.destinationPosition = destinationPosition;
 }
 
+
 // main map function loaded
 function initMap() {
     // create the map
