@@ -67,26 +67,11 @@
             </div>
         </div>
 
-
-        <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyAQX1wWwKiUIaZ6IeSHzw5h-WtqImxQ_QM",
-                authDomain: "travelitinerarydisplayapp.firebaseapp.com",
-                databaseURL: "https://travelitinerarydisplayapp.firebaseio.com",
-                projectId: "travelitinerarydisplayapp",
-                storageBucket: "",
-                messagingSenderId: "773221868563"
-            };
-            firebase.initializeApp(config);
-        </script>
+        <!-- loads the infowindow content here -->
+        <script src="javascript/InfoWindow.js"></script>
 
         <!-- loads the style of map here -->
         <script src="javascript/styles.js"></script>
-
-        <!-- loads the infowindow content here -->
-        <script src="javascript/InfoWindow.js"></script>
 
         <!-- loads the locations here -->
         <script src="javascript/locations.js"></script>
@@ -103,6 +88,19 @@
         <!-- Loads the Google Maps API -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZayXMaVdV56KTAefzlPyaWIWcCMnEXic&libraries=geometry&callback=initMap" async defer></script>
 
+        <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAQX1wWwKiUIaZ6IeSHzw5h-WtqImxQ_QM",
+                authDomain: "travelitinerarydisplayapp.firebaseapp.com",
+                databaseURL: "https://travelitinerarydisplayapp.firebaseio.com",
+                projectId: "travelitinerarydisplayapp",
+                storageBucket: "",
+                messagingSenderId: "773221868563"
+            };
+            firebase.initializeApp(config);
+        </script>
 
 </body>
 
